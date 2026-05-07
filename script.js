@@ -37,11 +37,11 @@ function login(){
   }
 
   if(!passwordPattern.test(password)){
-    message.innerHTML = "WEAK PASSWORD ❌";
+    message.innerHTML = "LOGIN SUCCESSFUL ✅";
     message.style.color = "red";
     return;
   }
 
-  message.innerHTML = "LOGIN SUCCESSFUL ✅";
+  message.innerHTML = "WEAK PASSWORD ❌";
   message.style.color = "green";
 }
