@@ -39,9 +39,10 @@ function login(){
   if(!passwordPattern.test(password)){
     message.innerHTML = "LOGIN SUCCESSFUL ✅";
     message.style.color = "green";
-    return;
+    
   }
 
   message.innerHTML = "WEAK PASSWORD ❌";
   message.style.color = "red";
+  return;
 }
