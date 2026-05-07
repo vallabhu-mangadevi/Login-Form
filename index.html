@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Login Page</title>
+  <title>Login Form</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -14,17 +14,16 @@
   <input type="text" id="username" placeholder="Username">
 
   <div class="password-box">
-    <input type="password" id="password" placeholder="Password">
-    <span onclick="togglePassword()" class="eye">👁️</span>
-  </div>
 
-  <div id="hint" class="hint">
-    Password must have Caps, small, number, symbol (min 6 chars)
+    <input type="password" id="password" placeholder="Password">
+
+    <span id="eye" onclick="togglePassword()">👁️</span>
+
   </div>
 
   <button onclick="login()">Login</button>
 
-  <div id="message"></div>
+  <p id="message"></p>
 
 </div>
 
