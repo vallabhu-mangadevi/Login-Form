@@ -21,7 +21,8 @@ function login(){
   let usernamePattern = /^[a-zA-Z0-9]+$/;
   let passwordPattern = /^(?=.[a-z])(?=.[A-Z])(?=.\d)(?=.[@$!%*?&]).{6,}$/;
 
-  
+  // ALWAYS allow click
+  console.log("Login button clicked");
 
   if(username === "" || password === ""){
     message.innerHTML = "PLEASE FILL ALL FIELDS";
@@ -36,12 +37,11 @@ function login(){
   }
 
   if(!passwordPattern.test(password)){
-    message.innerHTML = "WEAK PASSWORD (use Caps + small + number + symbol)";
+    message.innerHTML = "WEAK PASSWORD ❌";
     message.style.color = "red";
     return;
   }
 
-  
-  message.innerHTML = "LOGIN SUCCESSFUL";
+  message.innerHTML = "LOGIN SUCCESSFUL ✅";
   message.style.color = "green";
 }
