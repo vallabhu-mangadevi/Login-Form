@@ -18,7 +18,7 @@ let passwordPattern =
 if(username === "" || password === ""){
 
 message.innerHTML =
-"Please fill all fields";
+"PLEASE FILL ALL FIELDS";
 
 message.style.color = "red";
 }
@@ -26,7 +26,7 @@ message.style.color = "red";
 else if(!usernamePattern.test(username)){
 
 message.innerHTML =
-"Username should contain only letters and numbers";
+"USERNAME MUST CONTAIN ONLY LETTERS AND NUMBERS";
 
 message.style.color = "red";
 }
@@ -34,7 +34,7 @@ message.style.color = "red";
 else if(!passwordPattern.test(password)){
 
 message.innerHTML =
-"Password must contain capital, small, number and symbol";
+"PASSWORD MUST CONTAIN CAPITAL, SMALL, NUMBER AND SYMBOL";
 
 message.style.color = "red";
 }
@@ -42,7 +42,7 @@ message.style.color = "red";
 else{
 
 message.innerHTML =
-"Login Successful";
+"LOGIN SUCCESSFUL";
 
 message.style.color = "green";
 }
