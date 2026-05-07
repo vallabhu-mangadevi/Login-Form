@@ -1,39 +1,52 @@
-body{
-  margin:0;
-  padding:0;
-  background:#f2f2f2;
-  font-family:Arial;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  height:100vh;
+body {
+  font-family: Arial;
+  background: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.container{
-  background:white;
-  padding:30px;
-  width:300px;
-  border-radius:10px;
-  box-shadow:0 0 10px gray;
-  text-align:center;
+.login-box {
+  background: white;
+  padding: 20px;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px gray;
+  text-align: center;
 }
 
-input{
-  width:90%;
-  padding:10px;
-  margin-top:10px;
+input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
 }
 
-button{
-  width:95%;
-  padding:10px;
-  margin-top:15px;
-  background:blue;
-  color:white;
-  border:none;
-  cursor:pointer;
+.password-box {
+  position: relative;
 }
 
-#message{
-  margin-top:15px;
+.eye {
+  position: absolute;
+  right: 20px;
+  top: 12px;
+  cursor: pointer;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: blue;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.hint {
+  font-size: 12px;
+  color: gray;
+}
+
+#message {
+  margin-top: 10px;
 }
