@@ -1,48 +1,45 @@
-body {
-  font-family: Arial;
-  background: #e6e6e6;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+function togglePassword(){
+
+  let pass = document.getElementById("password");
+  let eye = document.getElementById("eye");
+
+  if(pass.type === "password"){
+    pass.type = "text";
+    eye.innerHTML = "🙈";   // eye OFF
+  }else{
+    pass.type = "password";
+    eye.innerHTML = "👁️";   // eye ON
+  }
 }
 
-.login-box {
-  background: white;
-  padding: 25px;
-  width: 300px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px gray;
-  text-align: center;
-}
+function login(){
 
-input {
-  width: 90%;
-  padding: 10px;
-  margin: 10px 0;
-}
+  let username = document.getElementById("username").value;
+  let password = document.getElementById("password").value;
+  let message = document.getElementById("message");
 
-.password-box {
-  position: relative;
-}
+  let usernamePattern = /^[a-zA-Z0-9]+$/;
 
-.password-box span {
-  position: absolute;
-  right: 15px;
-  top: 12px;
-  cursor: pointer;
-}
+  // strong password rule
+  let passwordPattern = /^(?=.[a-z])(?=.[A-Z])(?=.\d)(?=.[@$!%*?&]).{6,}$/;
 
-button {
-  width: 100%;
-  padding: 10px;
-  background: green;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
+  if(username === "" || password === ""){
+    message.innerHTML = "PLEASE FILL ALL FIELDS";
+    message.style.color = "red";
+  }
 
-#message {
-  margin-top: 10px;
-  font-weight: bold;
+  else if(!usernamePattern.test(username)){
+    message.innerHTML = "INVALID USERNAME";
+    message.style.color = "red";
+  }
+
+  else if(!passwordPattern.test(password)){
+    message.innerHTML = "WEAK PASSWORD";
+    message.style.color = "red";
+  }
+
+  else{
+    message.innerHTML = "LOGIN SUCCESSFUL";
+    message.style.color = "green";
+  }
 }
