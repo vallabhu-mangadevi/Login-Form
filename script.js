@@ -5,10 +5,10 @@ function togglePassword(){
 
   if(pass.type === "password"){
     pass.type = "text";
-    eye.innerHTML = "🙈";   // eye OFF
+    eye.innerHTML = "🙈";
   }else{
     pass.type = "password";
-    eye.innerHTML = "👁️";   // eye ON
+    eye.innerHTML = "👁️";
   }
 }
 
@@ -19,27 +19,29 @@ function login(){
   let message = document.getElementById("message");
 
   let usernamePattern = /^[a-zA-Z0-9]+$/;
-
-  // strong password rule
   let passwordPattern = /^(?=.[a-z])(?=.[A-Z])(?=.\d)(?=.[@$!%*?&]).{6,}$/;
+
+  
 
   if(username === "" || password === ""){
     message.innerHTML = "PLEASE FILL ALL FIELDS";
     message.style.color = "red";
+    return;
   }
 
-  else if(!usernamePattern.test(username)){
+  if(!usernamePattern.test(username)){
     message.innerHTML = "INVALID USERNAME";
     message.style.color = "red";
+    return;
   }
 
-  else if(!passwordPattern.test(password)){
-    message.innerHTML = "WEAK PASSWORD";
+  if(!passwordPattern.test(password)){
+    message.innerHTML = "WEAK PASSWORD (use Caps + small + number + symbol)";
     message.style.color = "red";
+    return;
   }
 
-  else{
-    message.innerHTML = "LOGIN SUCCESSFUL";
-    message.style.color = "green";
-  }
+  
+  message.innerHTML = "LOGIN SUCCESSFUL";
+  message.style.color = "green";
 }
