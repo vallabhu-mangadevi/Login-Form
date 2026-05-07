@@ -1,25 +1,32 @@
 body {
   font-family: Arial;
-  background: #e6e6e6;
+  background: linear-gradient(135deg, #74ebd5, #9face6);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
 
+/* ⭐ SMALL LOGIN BOX */
 .login-box {
   background: white;
-  padding: 25px;
-  width: 300px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px gray;
+  width: 280px;          /* small box */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
   text-align: center;
+}
+
+.login-box h2 {
+  margin-bottom: 15px;
 }
 
 input {
   width: 90%;
   padding: 10px;
-  margin: 10px 0;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
 }
 
 .password-box {
@@ -34,15 +41,22 @@ input {
 }
 
 button {
-  width: 100%;
+  width: 95%;
   padding: 10px;
-  background: green;
+  background: #4CAF50;
   color: white;
   border: none;
+  border-radius: 6px;
   cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #45a049;
 }
 
 #message {
   margin-top: 10px;
   font-weight: bold;
+  font-size: 14px;
 }
